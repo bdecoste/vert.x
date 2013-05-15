@@ -26,5 +26,7 @@ public interface VertxFactory {
 	Vertx createVertx(String hostname);
 	
 	Vertx createVertx(int port, String hostname);
+	
+	Vertx createVertx(int port, String hostname, int advertisePort, String advertiseHost);
 
 }

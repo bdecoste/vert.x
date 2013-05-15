@@ -38,5 +38,10 @@ public class DefaultVertxFactory implements VertxFactory {
 	public Vertx createVertx(int port, String hostname) {
 		return new DefaultVertx(port, hostname);
 	}
+	
+	@Override
+	public Vertx createVertx(int port, String hostname, int advertisePort, String advertiseHost) {
+		return new DefaultVertx(port, hostname, advertisePort, advertiseHost);
+	}
 
 }

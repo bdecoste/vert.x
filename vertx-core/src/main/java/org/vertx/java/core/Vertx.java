@@ -68,6 +68,10 @@ public abstract class Vertx {
   public static Vertx newVertx(int port, String hostname) {
 	  return loadFactory().createVertx(port, hostname);
   }
+  
+  public static Vertx newVertx(int port, String hostname, int advertisePort, String advertiseHost) {
+	  return loadFactory().createVertx(port, hostname, advertisePort, advertiseHost);
+  }
 
   /**
    * Create a TCP/SSL server
